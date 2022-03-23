@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "767072357111",
+    "project_id": "ermilova-4ce09",
+    "storage_bucket": "ermilova-4ce09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767072357111:android:69e994920a7f87ce5761f2",
+        "android_client_info": {
+          "package_name": "com.example.android.lesson8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767072357111-27serp24krvulj515m22gfndda5jm9su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiyDAI83JqNAgEwjOpNXCVxFHdD3B-qzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767072357111-27serp24krvulj515m22gfndda5jm9su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
