@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Lesson8</string>
+
+    <string name="local_notif_channel_id">Local notifications channel ID</string>
+    <string name="local_notif_channel_name">Local</string>
+    <string name="local_notif_channel_desc">Local notifications channel description.</string>
+
+    <string name="default_notification_channel_id">@string/local_notif_channel_id</string>
+
+    <string name="joke">Why do French people eat snails? They don\'t like fast food!</string>
+
+    <string name="send_local_notif_btn_text">Send local notification</string>
+    <string name="notif_tapped">Hope you had a good laugh!</string>
 </resources>
