@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="species"
+            type="com.example.android.lesson8.models.Species" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="@dimen/list_item_margin"
+            app:imageUrl="@{species.speciesIllustrationPhoto}"
+            app:layout_constraintBottom_toTopOf="@id/scientific_name_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scientific_name_text"
+            style="@style/list_item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/color_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            android:text="@{species.scientificName}"
+            tools:text="Scientific Name: " />
+
+        <TextView
+            android:id="@+id/color_text"
+            style="@style/list_item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/population_status_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scientific_name_text"
+            android:text="@{species.color}"
+            tools:text="Color: " />
+
+        <TextView
+            android:id="@+id/population_status_text"
+            style="@style/list_item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/habitat_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color_text"
+            android:text="@{species.populationStatus}"
+            tools:text="Population Status: " />
+
+
+        <TextView
+            android:id="@+id/habitat_text"
+            style="@style/list_item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/population_status_text"
+            android:text="@{species.habitat}"
+            tools:text="Habitat: " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
