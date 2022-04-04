@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.example.android.lesson8.models.EmployeeWithPosition" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/recyclerViewItemMargin"
+        android:padding="@dimen/recyclerViewItemPadding"
+        android:background="@drawable/round_corners">
+
+        <TextView
+            android:id="@+id/fio"
+            style="@style/EmployeeRecyclerViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/fio(employee.employee.firstName, employee.employee.name, employee.employee.lastName)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/age_and_experience"
+            tools:text="FIO"/>
+
+        <TextView
+            android:id="@+id/age_and_experience"
+            style="@style/EmployeeRecyclerViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/age_and_experience(employee.employee.age, employee.employee.experience)}"
+            app:layout_constraintBottom_toTopOf="@id/position"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fio"
+            tools:text="29" />
+        <TextView
+            android:id="@+id/position"
+            style="@style/EmployeeRecyclerViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{employee.position.title}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age_and_experience"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Developer"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

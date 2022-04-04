@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lesson8</string>
+    <string name="app_name">Lesson 11</string>
+    <string name="positions">Positions</string>
+    <string name="employees">Employees</string>
+
+    <string name="fio" translatable="false">%1$s %2$s %3$s</string>
+    <string name="age_and_experience" translatable="false">%1$d (%2$s)</string>
 </resources>

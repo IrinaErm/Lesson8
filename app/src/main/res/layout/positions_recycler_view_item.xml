@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="position"
+            type="com.example.android.lesson8.models.Position" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/recyclerViewItemMargin"
+        android:background="@drawable/round_corners">
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/PositionRecyclerViewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{position.title}"
+            android:textAlignment="center"
+            tools:text="Developer" />
+
+    </FrameLayout>
+</layout>
