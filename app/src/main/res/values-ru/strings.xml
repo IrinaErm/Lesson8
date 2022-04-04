@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Урок 11</string>
+    <string name="positions">Должности</string>
+    <string name="employees">Сотрудники</string>
+</resources>

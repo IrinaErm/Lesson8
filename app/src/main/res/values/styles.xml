@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PositionRecyclerViewText">
+        <item name="android:textSize">@dimen/positionRecyclerViewTextSize</item>
+        <item name="android:padding">@dimen/recyclerViewTextPadding</item>
+        <item name="android:fontFamily">@font/martel</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EmployeeRecyclerViewText">
+        <item name="android:textSize">@dimen/employeeRecyclerViewTextSize</item>
+        <item name="android:padding">@dimen/recyclerViewTextPadding</item>
+        <item name="android:fontFamily">@font/alike_angular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

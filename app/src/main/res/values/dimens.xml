@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="positionRecyclerViewTextSize">23dp</dimen>
+
+    <dimen name="employeeRecyclerViewTextSize">18dp</dimen>
+
+    <dimen name="recyclerViewTextPadding">5dp</dimen>
+
+    <dimen name="recyclerViewItemMargin">5dp</dimen>
+    <dimen name="recyclerViewItemPadding">12dp</dimen>
+</resources>
