@@ -5,6 +5,7 @@ import com.example.android.lesson8.domain.repository.SpeciesRepository
 import com.example.android.lesson8.model.datasources.SpeciesLocalDataSource
 import com.example.android.lesson8.model.datasources.SpeciesRemoteDataSource
 import com.example.android.lesson8.model.models.Species
+import com.example.android.lesson8.model.retrofit.dto.SpeciesNetworkDto
 import kotlinx.coroutines.flow.*
 
 
@@ -17,17 +18,22 @@ class SpeciesRepositoryImpl(
     override fun getAllSpecies(): Flow<List<Species>> {
         return if (checkConnection()) {
             flow {
-                emit(speciesRemoteDataSource.getAllSpecies().map { species ->
-                    species.isFavourite = species.scientificName?.let {
-                        speciesLocalDataSource.isFavourite(
-                            it
-                        )
-                    } ?: false
-                    species
-                })
+                emit (getSpeciesListFromNetwork())
             }
         } else {
             speciesLocalDataSource.getAllFavourites()
+        }
+    }
+
+    private suspend fun getSpeciesListFromNetwork(): List<Species> {
+        return speciesRemoteDataSource.getAllSpecies().map { speciesDto ->
+            SpeciesNetworkDto.mapToModel(speciesDto).apply {
+                isFavourite = scientificName?.let {
+                    speciesLocalDataSource.isFavourite(
+                        it
+                    )
+                } ?: false
+            }
         }
     }
 
